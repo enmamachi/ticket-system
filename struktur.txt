@@ -1,0 +1,18 @@
+ticket-system/
+├── config/
+│   └── db.js
+├── controllers/
+│   ├── authController.js
+│   ├── ticketController.js
+│   └── userController.js
+├── models/
+│   ├── Ticket.js
+│   └── User.js
+├── routes/
+│   ├── authRoutes.js
+│   ├── ticketRoutes.js
+│   └── userRoutes.js
+├── middlewares/
+│   └── auth.js
+├── app.js
+└── package.json
