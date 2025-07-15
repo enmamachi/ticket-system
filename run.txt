@@ -1,0 +1,77 @@
+Cara Menggunakan
+Install dependencies: npm install
+
+Buat file .env dan isi dengan konfigurasi yang sesuai
+
+Jalankan server: npm run dev
+
+Fitur Sistem
+Multi-Account dengan Role Berbeda:
+
+User: Hanya bisa membuat tiket dan melihat tiket mereka sendiri
+
+Support: Bisa melihat tiket yang ditugaskan dan tiket terbuka
+
+Admin: Bisa melihat semua tiket dan mengelola semua aspek
+
+Manajemen Tiket:
+
+Buat tiket baru
+
+Update status tiket
+
+Tambahkan komentar
+
+Filter berdasarkan status/prioritas
+
+Autentikasi:
+
+Registrasi user baru
+
+Login dengan JWT
+
+Proteksi route berdasarkan role
+
+Contoh Request API
+Registrasi User
+text
+POST /api/v1/auth/register
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "123456",
+  "role": "user"
+}
+Login
+text
+POST /api/v1/auth/login
+{
+  "email": "john@example.com",
+  "password": "123456"
+}
+Buat Tiket Baru
+text
+POST /api/v1/tickets
+Headers: Authorization: Bearer <token>
+{
+  "title": "Masalah Login",
+  "description": "Saya tidak bisa login ke sistem",
+  "priority": "high"
+}
+Dapatkan Semua Tiket
+text
+GET /api/v1/tickets
+Headers: Authorization: Bearer <token>
+Sistem ini bisa dikembangkan lebih lanjut dengan menambahkan fitur seperti:
+
+Notifikasi email
+
+Upload lampiran
+
+Pencarian dan filter yang lebih canggih
+
+Dashboard statistik
+
+dll.
+
+Semoga membantu! Jika Anda membutuhkan penjelasan lebih lanjut atau penyesuaian, beri tahu saya.
